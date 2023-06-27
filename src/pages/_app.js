@@ -1,4 +1,4 @@
-import "../styles/common.css";
+import "../../public/styles/common.css";
 
 const App = ({ Component }) => {
   return (
