@@ -26,7 +26,3 @@ a {
   height: 1px;
   background-color: #000;
 }
-
-@import "./home.css";
-@import "./result.css";
-@import "./select.css";
