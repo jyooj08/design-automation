@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="home">
       <h1 className="title">
-        나의 <span>건물</span> 찾기
+        나의 <span>건물</span> 찾기!
       </h1>
       <img className="title_image" src="/1234.jpeg" alt="" />
       <div className="text_box">
