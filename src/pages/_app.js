@@ -1,5 +1,11 @@
+import "../styles/common.css";
+
 const App = ({ Component }) => {
-  return <Component />;
+  return (
+    <div className="container">
+      <Component />
+    </div>
+  );
 };
 
 export default App;

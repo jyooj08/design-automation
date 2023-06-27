@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  /* background-image: url("/sky.jpeg"); */
+  width: 100vw;
+  height: 100vh;
+}
+
+@import "./home.css";
+@import "./result.css";
+@import "./select.css";
