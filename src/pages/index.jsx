@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header";
 import Link from "next/link";
 
@@ -12,6 +13,13 @@ const Home = () => {
             나의 <span className="font-bold">건물</span> 찾기
           </div>
         </div>
+
+        <img
+          src="/images/start.jpeg"
+          alt="시작 화면 이미지"
+          className="mx-auto mt-16"
+        />
+
         <Link href="/select" className="btn">
           시작하기
         </Link>
