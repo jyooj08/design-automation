@@ -44,6 +44,14 @@ const Select = () => {
             name="score"
             className="radio bg-[#000] w-[35px] h-[35px]"
           />
+          <span className="radio-label">그렇다</span>
+        </div>
+        <div className="relative">
+          <input
+            type="radio"
+            name="score"
+            className="radio bg-[#000] w-[35px] h-[35px]"
+          />
           <span className="radio-label">보통이다</span>
         </div>
         <div className="relative">
@@ -52,7 +60,15 @@ const Select = () => {
             name="score"
             className="radio bg-[#000] w-[35px] h-[35px]"
           />
-          <span className="radio-label">매우 그렇지 않다.</span>
+          <span className="radio-label">그렇지 않다</span>
+        </div>
+        <div className="relative">
+          <input
+            type="radio"
+            name="score"
+            className="radio bg-[#000] w-[35px] h-[35px]"
+          />
+          <span className="radio-label">매우 그렇지 않다</span>
         </div>
         <div className="radio-line"></div>
       </div>
