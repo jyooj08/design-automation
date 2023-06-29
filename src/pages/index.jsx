@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Button from "@/components/Button";
 import Header from "@/components/Header";
-
-import { useAtom, useAtomValue, useSetAtom } from "jotai";
-import Link from "next/link";
 
 const Home = () => {
   return (
@@ -23,23 +21,17 @@ const Home = () => {
         />
 
         <div className="flex flex-col items-center mt-16">
-          <span className="text">
-            어떤 건축이 좋은 건축인지 생각해본 적이 있다.
-          </span>
-          <span className="text">
+          <span>어떤 건축이 좋은 건축인지 생각해본 적이 있다.</span>
+          <span>
             어떤 건축이 &lsquo;나에게&rsquo; 좋은 건축일지도 고민해본 적이 있다.
           </span>
-          <span className="text">
+          <span>
             건축물이 주는 공간감을 결정하면 그 공간감을 만드는 역할을 할테니
           </span>
-          <span className="text">당신은 마음을 정해주기만 하면된다.</span>
+          <span>당신은 마음을 정해주기만 하면된다.</span>
         </div>
 
-        <div className="text-container">
-          <Link href="/select" className="btn">
-            시작하기
-          </Link>
-        </div>
+        <Button text="시작하기" landingUrl="/question?pageSeq=1" />
       </div>
     </>
   );
