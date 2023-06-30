@@ -8,8 +8,8 @@ const Home = () => {
       <Header />
       <div className="home">
         <div className="title mt-28 flex flex-col items-center">
-          <div className="subtitle text-[9px]">find your own building</div>
-          <div className="maintitle text-[36px]">
+          <div className="text-[9px]">find your own building</div>
+          <div className="text-[36px]">
             나의 <span className="font-bold">건물</span> 찾기
           </div>
         </div>
@@ -20,7 +20,7 @@ const Home = () => {
           className="mx-auto mt-16"
         />
 
-        <div className="flex flex-col items-center mt-16">
+        <div className="flex flex-col items-center mt-16 text-[14px]">
           <span>어떤 건축이 좋은 건축인지 생각해본 적이 있다.</span>
           <span>
             어떤 건축이 &lsquo;나에게&rsquo; 좋은 건축일지도 고민해본 적이 있다.

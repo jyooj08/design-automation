@@ -34,7 +34,7 @@ const Select = () => {
           <input
             type="radio"
             name="score"
-            className="radio bg-[#000] w-[35px] h-[35px]"
+            className="radio bg-[#000] w-[29px] h-[29px]"
           />
           <span className="radio-label">매우 그렇다</span>
         </div>
@@ -42,7 +42,7 @@ const Select = () => {
           <input
             type="radio"
             name="score"
-            className="radio bg-[#000] w-[35px] h-[35px]"
+            className="radio bg-[#000] w-[29px] h-[29px]"
           />
           <span className="radio-label">그렇다</span>
         </div>
@@ -50,7 +50,7 @@ const Select = () => {
           <input
             type="radio"
             name="score"
-            className="radio bg-[#000] w-[35px] h-[35px]"
+            className="radio bg-[#000] w-[29px] h-[29px]"
           />
           <span className="radio-label">보통이다</span>
         </div>
@@ -58,7 +58,7 @@ const Select = () => {
           <input
             type="radio"
             name="score"
-            className="radio bg-[#000] w-[35px] h-[35px]"
+            className="radio bg-[#000] w-[29px] h-[29px]"
           />
           <span className="radio-label">그렇지 않다</span>
         </div>
@@ -66,7 +66,7 @@ const Select = () => {
           <input
             type="radio"
             name="score"
-            className="radio bg-[#000] w-[35px] h-[35px]"
+            className="radio bg-[#000] w-[29px] h-[29px]"
           />
           <span className="radio-label">매우 그렇지 않다</span>
         </div>
