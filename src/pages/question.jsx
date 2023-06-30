@@ -1,11 +1,19 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const Select = () => {
   const router = useRouter();
   const { query } = router;
   const { pageSeq } = query;
+
+  useEffect(() => {
+    const radios = document.querySelectorAll(".radio-container .radio");
+    for (var i = 0; i < radios.length; i++) {
+      radios[i].checked = false;
+    }
+  }, [pageSeq]);
 
   return (
     <>
