@@ -58,6 +58,8 @@ const Question = () => {
     setMove(false);
   }, [pageSeq]);
 
+  if (!router.isReady) return;
+
   return (
     <>
       <Header />
