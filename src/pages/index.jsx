@@ -31,7 +31,7 @@ const Home = () => {
           <span>당신은 마음을 정해주기만 하면된다.</span>
         </div>
 
-        <Button text="시작하기" landingUrl="/question?pageSeq=1" />
+        <Button text="시작하기" landingUrl="/question?pageSeq=0" />
       </div>
     </>
   );
