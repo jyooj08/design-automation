@@ -82,7 +82,7 @@ const Question = () => {
               type="radio"
               name="score"
               value={option.value}
-              className="radio bg-[#000] w-[29px] h-[29px]"
+              className="radio bg-[#fff] w-[29px] h-[29px] border-black"
               onClick={() => {
                 optionValues[pageSeq] = option.value;
                 setOptionValues(optionValues);
