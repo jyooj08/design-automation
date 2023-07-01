@@ -1,14 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import Button from "@/components/Button";
 import Header from "@/components/Header";
+import { optionValuesAtom } from "@/stores/option";
+import { useAtomValue } from "jotai";
 
 const Result = () => {
+  const optionValues = useAtomValue(optionValuesAtom);
+  const myType = optionValues.join("");
   return (
     <>
       <Header />
       <div className="mt-40 mx-[5.5rem]">
         <div className="text-[36px]">
-          나의 <span className="font-bold">건물</span>은 #3111
+          나의 <span className="font-bold">건물</span>은 #{myType}
         </div>
       </div>
 

@@ -1,5 +1,7 @@
 import Button from "@/components/Button";
 import Header from "@/components/Header";
+import { optionValuesAtom } from "@/stores/option";
+import { useAtom } from "jotai";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
@@ -33,10 +35,19 @@ const contents = [
   ],
 ];
 
+const options = [
+  { text: "매우 그렇다", value: 5 },
+  { text: "그렇다", value: 4 },
+  { text: "보통이다", value: 3 },
+  { text: "그렇지 않다", value: 2 },
+  { text: "매우 그렇지 않다", value: 1 },
+];
+
 const Question = () => {
   const router = useRouter();
   const { query } = router;
   const pageSeq = Number(query.pageSeq);
+  const [optionValues, setOptionValues] = useAtom(optionValuesAtom);
 
   useEffect(() => {
     const radios = document.querySelectorAll(".radio-container .radio");
@@ -63,46 +74,21 @@ const Question = () => {
       </div>
 
       <div className="relative radio-container flex justify-evenly mt-20 pb-12">
-        <div className="relative">
-          <input
-            type="radio"
-            name="score"
-            className="radio bg-[#000] w-[29px] h-[29px]"
-          />
-          <span className="radio-label">매우 그렇다</span>
-        </div>
-        <div className="relative">
-          <input
-            type="radio"
-            name="score"
-            className="radio bg-[#000] w-[29px] h-[29px]"
-          />
-          <span className="radio-label">그렇다</span>
-        </div>
-        <div className="relative">
-          <input
-            type="radio"
-            name="score"
-            className="radio bg-[#000] w-[29px] h-[29px]"
-          />
-          <span className="radio-label">보통이다</span>
-        </div>
-        <div className="relative">
-          <input
-            type="radio"
-            name="score"
-            className="radio bg-[#000] w-[29px] h-[29px]"
-          />
-          <span className="radio-label">그렇지 않다</span>
-        </div>
-        <div className="relative">
-          <input
-            type="radio"
-            name="score"
-            className="radio bg-[#000] w-[29px] h-[29px]"
-          />
-          <span className="radio-label">매우 그렇지 않다</span>
-        </div>
+        {options.map((option, i) => (
+          <div key={i} className="relative">
+            <input
+              type="radio"
+              name="score"
+              value={option.value}
+              className="radio bg-[#000] w-[29px] h-[29px]"
+              onClick={() => {
+                optionValues[pageSeq] = option.value;
+                setOptionValues(optionValues);
+              }}
+            />
+            <span className="radio-label">{option.text}</span>
+          </div>
+        ))}
         <div className="radio-line"></div>
       </div>
 

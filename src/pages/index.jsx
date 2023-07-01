@@ -1,8 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import Button from "@/components/Button";
 import Header from "@/components/Header";
+import { optionValuesAtom } from "@/stores/option";
+import { useSetAtom } from "jotai";
+import { useEffect } from "react";
 
 const Home = () => {
+  const setOptionValues = useSetAtom(optionValuesAtom);
+
+  useEffect(() => {
+    setOptionValues([0, 0, 0, 0]);
+  });
+
   return (
     <>
       <Header />
