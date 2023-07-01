@@ -48,7 +48,7 @@ const Result = () => {
         <span>당신은 마음을 정해주기만 하면된다.</span>
       </div>
 
-      <Button landingUrl="/" text="처음으로" />
+      <Button landingUrl="/" text="처음으로" move={true} />
     </>
   );
 };

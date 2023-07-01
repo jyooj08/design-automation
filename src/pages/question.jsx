@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import { optionValuesAtom } from "@/stores/option";
 import { useAtom } from "jotai";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const contents = [
   [
@@ -48,12 +48,14 @@ const Question = () => {
   const { query } = router;
   const pageSeq = Number(query.pageSeq);
   const [optionValues, setOptionValues] = useAtom(optionValuesAtom);
+  const [move, setMove] = useState(false);
 
   useEffect(() => {
     const radios = document.querySelectorAll(".radio-container .radio");
     for (var i = 0; i < radios.length; i++) {
       radios[i].checked = false;
     }
+    setMove(false);
   }, [pageSeq]);
 
   return (
@@ -84,6 +86,7 @@ const Question = () => {
               onClick={() => {
                 optionValues[pageSeq] = option.value;
                 setOptionValues(optionValues);
+                setMove(true);
               }}
             />
             <span className="radio-label">{option.text}</span>
@@ -97,6 +100,7 @@ const Question = () => {
         landingUrl={
           pageSeq < 3 ? `/question?pageSeq=${pageSeq + 1}` : "/result"
         }
+        move={move}
       />
     </>
   );
