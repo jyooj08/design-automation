@@ -36,11 +36,31 @@ const contents = [
 ];
 
 const options = [
-  { text: "매우 그렇다", value: 5 },
-  { text: "그렇다", value: 4 },
-  { text: "보통이다", value: 3 },
-  { text: "그렇지 않다", value: 2 },
-  { text: "매우 그렇지 않다", value: 1 },
+  [
+    { text: "보통이다", value: 3 },
+    { text: "그렇지 않다", value: 4 },
+    { text: "매우 그렇지 않다", value: 5 },
+  ],
+  [
+    { text: "매우 그렇다", value: 1 },
+    { text: "그렇다", value: 2 },
+    { text: "보통이다", value: 3 },
+    { text: "그렇지 않다", value: 4 },
+    { text: "매우 그렇지 않다", value: 5 },
+  ],
+  [
+    { text: "매우 그렇다", value: 1 },
+    { text: "그렇다", value: 2 },
+    { text: "보통이다", value: 3 },
+    { text: "그렇지 않다", value: 4 },
+    { text: "매우 그렇지 않다", value: 5 },
+  ],
+  [
+    { text: "매우 그렇다", value: 1 },
+    { text: "그렇다", value: 2 },
+    { text: "보통이다", value: 3 },
+    { text: "그렇지 않다", value: 4 },
+  ],
 ];
 
 const Question = () => {
@@ -78,7 +98,7 @@ const Question = () => {
       </div>
 
       <div className="relative radio-container flex justify-evenly mt-20 pb-12">
-        {options.map((option, i) => (
+        {options[pageSeq].map((option, i) => (
           <div key={i} className="relative">
             <input
               type="radio"
