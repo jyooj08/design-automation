@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import Button from "@/components/Button";
 import Header from "@/components/Header";
 import { optionValuesAtom } from "@/stores/option";
 import { useAtomValue } from "jotai";
+import Image from "next/image";
 
 const Result = () => {
   const optionValues = useAtomValue(optionValuesAtom);
@@ -18,19 +18,21 @@ const Result = () => {
 
       <div className="flex justify-evenly mt-20">
         <div>
-          <img
+          <Image
             src={`/images/${myType}.jpg`}
             alt="건물 외관 이미지"
-            className="w-[240px] h-[240px]"
             style={{ border: "1px solid black" }}
+            width={240}
+            height={240}
           />
           <div className="text-[14px] text-center mt-2">건물 외관</div>
         </div>
         <div>
-          <img
+          <Image
             src={`/images/${myType}_wall.jpg`}
             alt="외벽 이미지"
-            className="w-[240px] h-[240px]"
+            width={240}
+            height={240}
             style={{ border: "1px solid black" }}
           />
           <div className="text-[14px] text-center mt-2">외벽</div>
