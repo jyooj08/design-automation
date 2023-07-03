@@ -19,7 +19,7 @@ const Result = () => {
       <div className="flex justify-evenly mt-20">
         <div>
           <img
-            src="/images/d.png"
+            src={`/images/${myType}.jpg`}
             alt="건물 외관 이미지"
             className="w-[240px] h-[240px]"
             style={{ border: "1px solid black" }}
@@ -28,7 +28,7 @@ const Result = () => {
         </div>
         <div>
           <img
-            src="/images/d.png"
+            src={`/images/${myType}_wall.jpg`}
             alt="외벽 이미지"
             className="w-[240px] h-[240px]"
             style={{ border: "1px solid black" }}
