@@ -19,7 +19,7 @@ const Result = () => {
       <div className="flex justify-evenly mt-20">
         <div>
           <Image
-            src={`/images/${myType}.jpg`}
+            src={`/images/full/${myType}.jpg`}
             alt="건물 외관 이미지"
             style={{ border: "1px solid black" }}
             width={240}
@@ -29,7 +29,7 @@ const Result = () => {
         </div>
         <div>
           <Image
-            src={`/images/${myType}_wall.jpg`}
+            src={`/images/wall/${myType}_wall.jpg`}
             alt="외벽 이미지"
             width={240}
             height={240}
