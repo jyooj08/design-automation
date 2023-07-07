@@ -58,8 +58,8 @@ const options = [
   [
     { text: "매우 그렇다", value: 1 },
     { text: "그렇다", value: 2 },
-    { text: "보통이다", value: 3 },
-    { text: "그렇지 않다", value: 4 },
+    { text: "그렇지 않다", value: 3 },
+    { text: "매우 그렇지 않다", value: 4 },
   ],
 ];
 
